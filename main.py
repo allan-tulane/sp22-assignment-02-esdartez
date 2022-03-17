@@ -46,8 +46,24 @@ def pad(x,y):
 
 
 def subquadratic_multiply(x, y):
-    ### TODO
-    pass
+    xvec,yvec = pad(x.binary_vec,y.binary_vec)
+    if binary2int(xvec).decimal_val <=1 and binary2int(yvec).decimal_val <= 1:
+        res=BinaryNumber(binary2int(xvec).decimal_val * binary2int(yvec).decimal_val)
+        return res.binary_vec
+    else:
+        left_x,left_y = split_number(xvec)
+        right_x,right_y = split_number(yvec)
+        n=0
+        for i in x.binary_vec:
+            n+=1
+        left = BinaryNumber(binary2int(left_x.binary_vec).decimal_val * binary2int(left_y.binary_vec).decimal_val)
+        left = bitshift(left,n)
+        mid1 = binary2int(left_x.binary_vec).decimal_val + binary2int(right_y.binary_vec).decimal_val
+        mid2 = binary2int(right_x.binary_vec).decimal_val + binary2int(left_y.binary_vec).decimal_val
+        mid = bitshift(BinaryNumber(mid1 + mid2),n//2)
+        right = BinaryNumber(binary2int(right_x.binary_vec).decimal_val * binary2int(right_y.binary_vec).decimal_val)
+        res = left.decimal_val + mid.decimal_val + right.decimal_val
+        return BinaryNumber(res)
     ###
 
 ## Feel free to add your own tests here.
