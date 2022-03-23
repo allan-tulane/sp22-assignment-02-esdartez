@@ -12,56 +12,56 @@ and push to your github repository.
 
 1. Derive asymptotic upper bounds of work for each recurrence below.
   * $W(n)=2W(n/3)+1$
-  
+  theta(n^(log2/log3))
 .  
 .  
 .  
 .  
 .  
   * $W(n)=5W(n/4)+n$
-.  
+.  theta(n^(log5/2log2))
 .  
 .  
 .  
 .  
   * $W(n)=7W(n/7)+n$
-.  
+.  nlog_7n
 .  
 .  
 .  
 .  
   * $W(n)=9W(n/3)+n^2$
-.  
+.  n^2log_3n
 .  
 .  
 .  
 .  
   * $W(n)=8W(n/2)+n^3$
-.  
+.  n^3log_2n
 .  
 .  
 .  
 .  
   * $W(n)=49W(n/25)+n^{3/2}\log n$
-.  
+.  125n^3/2/76logn
 .  
 .  
 .  
 .  
   * $W(n)=W(n-1)+2$
-.  
+.  n
 .  
 .  
 .  
 .  
   * $W(n)= W(n-1)+n^c$, with $c\geq 1$
-.  
+.  n^c
 .  
 .  
 .  
 .  
   * $W(n)=W(\sqrt{n})+1$
-
+ logn/logn
 
 2. Suppose that for a given task you are choosing between the following three algorithms:
 
