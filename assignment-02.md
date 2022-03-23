@@ -80,6 +80,10 @@ and push to your github repository.
 
     What are the asymptotic running times of each of these algorithms?
     Which algorithm would you choose?
+    A: O(n^log5)
+    B: O(2^n)
+    C: O(nlogn)
+    A is the fastest so i would choose that one.
 
 
 3. Now that you have some practice solving recurrences, let's work on
